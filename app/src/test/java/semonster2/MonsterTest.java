@@ -10,4 +10,9 @@ public class MonsterTest {
     Monster classMonsterTest = new Monster();
     assertEquals("デュラハン:レア度[0]", classMonsterTest.showMonster());
   }
+
+  @Test
+  public void MonsterConstructorTest() {
+    assertEquals("デュラハン0", new Monster("デュラハン", 0));
+  }
 }

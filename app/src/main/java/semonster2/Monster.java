@@ -12,12 +12,18 @@ public class Monster {
     this.rare = random.nextInt(5);
   }
 
+  Monster(String name, int rare) {
+    this.name = name;
+    this.rare = rare;
+    System.out.println(this.name + Integer.toString(this.rare));
+  }
+
   String summonMonster(int mnumber) {
     String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
     return monsters[mnumber];
   }
 
   String showMonster() {
-    return this.summonMonster(3)+":レア度[0]";
+    return this.summonMonster(3) + ":レア度[0]";
   }
 }
