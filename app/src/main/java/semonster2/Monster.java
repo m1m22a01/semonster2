@@ -15,7 +15,7 @@ public class Monster {
   Monster(String name, int rare) {
     this.name = name;
     this.rare = rare;
-    System.out.println(this.name + Integer.toString(this.rare));
+    System.out.println(this.name.toString() + Integer.toString(this.rare));
   }
 
   String summonMonster(int mnumber) {
