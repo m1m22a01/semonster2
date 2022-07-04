@@ -13,6 +13,6 @@ public class MonsterTest {
 
   @Test
   public void MonsterConstructorTest() {
-    assertEquals("デュラハン0", new Monster("デュラハン", 0));
+    assertEquals("a0", new Monster("a", 0));
   }
 }
