@@ -13,6 +13,8 @@ public class MonsterTest {
 
   @Test
   public void MonsterConstructorTest() {
-    assertEquals("a0", new Monster("a", 0));
+    Monster Test = new Monster("a", 0);
+    assertEquals("a", Test.name);
+    assertEquals(0, Test.rare);
   }
 }
