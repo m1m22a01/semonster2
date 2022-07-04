@@ -1,13 +1,12 @@
 package semonster2;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class MonsterTest {
   @Test
-  public void showMonsterTest() {
+  public void appHasAGreeting() {
     Monster classMonsterTest = new Monster();
     assertEquals("デュラハン:レア度[0]", classMonsterTest.showMonster());
   }
+  // "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント"
 }

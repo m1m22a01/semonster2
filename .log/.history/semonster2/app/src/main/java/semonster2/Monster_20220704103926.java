@@ -18,6 +18,6 @@ public class Monster {
   }
 
   String showMonster() {
-    return this.summonMonster(3)+":レア度[0]";
+    return this.summonMonster(3)+"レア度[0]";
   }
 }

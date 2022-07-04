@@ -1,7 +1,5 @@
 package semonster2;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class MonsterTest {
