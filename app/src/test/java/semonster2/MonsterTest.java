@@ -17,4 +17,5 @@ public class MonsterTest {
     assertEquals("a", Test.name);
     assertEquals(0, Test.rare);
   }
+
 }
