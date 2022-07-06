@@ -3,19 +3,19 @@ package semonster2;
 import java.util.ArrayList;
 
 public class Player {
-  String name; // 名前
-  ArrayList<Monster> deck = new ArrayList<Monster>(); // デッキ
-  int level; // レベル
-  int deckNum = 5; // デッキ内のモンスター数
+  String name; // 名前(朝野)
+  ArrayList<Monster> deck = new ArrayList<Monster>(); // デッキ(朝野)
+  int level; // レベル(朝野)
+  int deckNum = 5; // デッキ内のモンスター数(朝野)
 
-  // コンストラクタ
+  // コンストラクタ(朝野)
   public Player(String name) {
     this.name = name;
     this.level = 1;
     setDeck();
   }
 
-  // デッキ生成
+  // デッキ生成(朝野)
   public void setDeck() {
     for (int i = 0; i < deckNum; i++) {
       // モンスターの生成
@@ -26,7 +26,7 @@ public class Player {
     }
   }
 
-  // デッキ内容出力
+  // デッキ内容出力(朝野)
   public String showDeck() {
     String showString = "";
 
@@ -44,7 +44,7 @@ public class Player {
     return showString;
   }
 
-  // レベルアップ処理
+  // レベルアップ処理(宮田)
   public void levelUp() {
     this.level = this.level + 1;
     System.out.println("レベルが1上がった");
