@@ -44,4 +44,9 @@ public class Player {
     return showString;
   }
 
+  // レベルアップ処理
+  public void levelUp() {
+    this.level = this.level + 1;
+    System.out.println("レベルが1上がった");
+  }
 }
