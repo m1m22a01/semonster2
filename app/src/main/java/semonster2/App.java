@@ -10,6 +10,14 @@ public class App {
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
+
+    // プレイヤーの生成(朝野)
+    Player player = new Player("OIT");
+
+    player.showDeck();
+
+
+    //バトル処理(佐藤)
   }
 
 }
