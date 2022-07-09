@@ -3,49 +3,39 @@ package semonster2;
 import java.util.Scanner;
 
 public class SeMonsterGame {
-  // 初期設定
-  Monster monster;
-  Monster my_monster;
   Player player;
+  Monster my_monster;
+  Monster monster;
+  Scanner scanner = new Scanner(System.in);
 
-  // 名前追加メソッド
-  public void addPlayer(String playerName) {
-    // Scanner scan = new Scanner(System.in); //
-    Player add_player = new Player(playerName);
-    this.player = add_player;
+  public void addPlayer(String name) {
+    player = new Player(name);
   }
 
-  // 自身のモンスターdrawメソッド
-  public void draw(String playerName) {
-    this.player.showDeck();
+  public void draw(String name) {
+    player.showDeck();
   }
 
-  public void battle(Monster monster, int num) {
+  public void battle(Monster monster) {
+    player.showDeck();
     this.monster = monster;
-    // Scanner scan = new Scanner(System.in);
-
-    System.out.println("\n----------------------------------------------");
-    // 以下対戦処理
-    System.out.println(this.monster.showMonster());
-    // 敵のHPがゼロになるまで繰り返す
+    int num = scanner.nextInt();
+    my_monster = player.deck.get(num);
     while (true) {
-      this.player.showDeck();
-      System.out.println("\n--Summon Monster in deck(1-5)--");
-      my_monster = player.deck.get(num);
+      System.out.printf("--Summon Monster %s--\n", my_monster.name);
       this.monster.HP -= my_monster.attack;
-      System.out.printf("%dで攻撃 %dのダメージ\n", my_monster.attack, this.monster.HP);
+      System.out.printf("my monster attack %d\n", my_monster.attack);
       my_monster.HP -= this.monster.attack;
-      System.out.printf("%sに%dのダメージ\n", my_monster.name, this.monster.HP);
+      System.out.printf("monster attack %d\n", my_monster.attack);
 
-      // 自分の手持ちがのHPがゼロになったら負け
       if (my_monster.HP <= 0) {
-        System.out.println("負け");
+        System.out.println("lose");
         break;
       } else if (monster.HP <= 0) {
-        System.out.println("勝ち");
+        System.out.println("win");
         player.levelUp();
+        break;
       }
-
     }
   }
 }
