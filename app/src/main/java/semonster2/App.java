@@ -9,15 +9,7 @@ public class App {
   }
 
   public static void main(String[] args) {
-
-    // デバッグ用
-    SeMonsterGame game = new SeMonsterGame();
-    // Monster monster;
-    // Scanner scan = new Scanner(System.in);
-    String name = "test";
-    game.addPlayer(name);
-    game.battle(new Monster(), 0);
-    // scan.close();
+    System.out.println(new App().getGreeting());
   }
 
 }
