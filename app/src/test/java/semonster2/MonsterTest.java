@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class MonsterTest {
 
+
   @Test
   public void MonsterConstructorTest() {
     Monster Test = new Monster("a", 0);
@@ -13,9 +14,12 @@ public class MonsterTest {
     assertEquals(0, Test.rare);
   }
 
-  @Test
-  public void showMonsterTest() {
-    Monster monster = new Monster("a", 0);
-  }
+// <<<<<<< game
+//   @Test
+//   public void showMonsterTest() {
+//     Monster monster = new Monster("a", 0);
+//   }
 
+// =======
+// >>>>>>> main
 }
