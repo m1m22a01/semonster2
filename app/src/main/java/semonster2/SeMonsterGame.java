@@ -36,9 +36,9 @@ public class SeMonsterGame {
       num = 0;// 標準入力ができないため変更しました
       my_monster = player.deck.get(num);
       this.monster.HP -= my_monster.attack;
-      System.out.printf("%dで攻撃 %dのダメージ\n", my_monster.attack, this.monster.HP);
+      System.out.printf("%dで攻撃 %dのダメージ\n", my_monster.name, this.monster.attack);
       my_monster.HP -= this.monster.attack;
-      System.out.printf("%sに%dのダメージ\n", my_monster.name, this.monster.HP);
+      System.out.printf("%sに%dのダメージ\n", my_monster.name, this.monster.attack);
 
       // 自分の手持ちがのHPがゼロになったら負け
       if (my_monster.HP <= 0) {
