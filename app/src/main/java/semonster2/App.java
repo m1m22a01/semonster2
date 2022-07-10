@@ -10,6 +10,11 @@ public class App {
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
+
+    SeMonsterGame game = new SeMonsterGame();
+    game.addPlayer("OIT");
+    game.draw("OIT");
+    game.battle(new Monster());
   }
 
 }
