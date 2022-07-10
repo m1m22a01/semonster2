@@ -13,4 +13,9 @@ public class MonsterTest {
     assertEquals(0, Test.rare);
   }
 
+  @Test
+  public void showMonsterTest() {
+    Monster monster = new Monster("a", 0);
+  }
+
 }
